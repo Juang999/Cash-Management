@@ -1,0 +1,29 @@
+body {
+    height: 100vh;
+    background-image: url('../images/background/pxfuel.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-div {
+    background-color: coral;
+    height: 100vh;
+}
+
+.div-icon {
+    width: 350px;
+    height: 280px;
+}
+
+.icon-login {
+    width: 150px;
+    height: 150px;
+}
+
+.btn-bg {
+    background-image: url('../images/background/pxfuel.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
