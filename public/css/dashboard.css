@@ -1,0 +1,15 @@
+.box-img {
+    background-color: coral;
+    width: 100%;
+    height: 150px;
+}
+
+.img-icon {
+    width: 100px !important;
+    height: 100px;
+}
+
+.bg-icon {
+    width: 100%;
+    height: 200px;
+}
