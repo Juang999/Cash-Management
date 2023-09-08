@@ -1,3 +1,15 @@
-.input-periode {
-    width: 250px;
+.font-header {
+    font-size: 15px;
+}
+
+.font-body {
+    font-size: 14px;
+}
+
+.table {
+    width: 100%;
+}
+
+.periode-code {
+    width: 10%;
 }

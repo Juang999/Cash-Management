@@ -22,5 +22,5 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/periode', function () {
-    return view('periode');
+    return view('periode/index');
 });
