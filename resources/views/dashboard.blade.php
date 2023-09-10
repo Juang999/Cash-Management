@@ -7,7 +7,7 @@
 @endpush
 
 @section('content')
-<div class="container h-100 d-flex justify-content-evenly align-items-center">
+<div class="container body-dashboard h-100 d-flex justify-content-evenly align-items-center">
     <div class="flex-item">
         <div class="card d-flex flex-column" style="width: 18rem;">
             <div class="bg-icon d-flex justify-content-center align-items-center w-100">
