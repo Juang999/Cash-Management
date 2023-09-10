@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav w-100 d-flex justify-content-between">
                     <li class="nav-item flex-item">
-                        {{-- <a class="nav-link active text-white" aria-current="page" href="#">Home</a> --}}
+                        <a class="nav-link active text-white" aria-current="page" href="/dashboard">Dashboard</a>
                     </li>
                     <li class="nav-item dropdown flex-item d-flex">
                         <img src="{{ asset('images/icon/user.png') }}" id="profile-photo" alt="">
@@ -33,6 +33,8 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <br>
                             <li><a class="dropdown-item" href="#">Logout</a></li>
                         </ul>
                     </li>
@@ -43,10 +45,16 @@
     <div class="content">
         @yield('content')
     </div>
+<footer class="text-muted fixed-bottom d-flex align-items-center bg-primary" style="height: 30px">
+    <div class="container flex-item">
+            <p class="text-white d-flex" style="margin: 0px;">Copyright &copy; 2023 &nbsp; <a href="https://github.com/Juang999" class="text-white text-decoration-none"> Bangkit Juang Raharjo</a></p>
+        </div>
+    </footer>
     @stack('jquery')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
+
 </body>
 
 </html>
