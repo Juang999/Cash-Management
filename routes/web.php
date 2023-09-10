@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Client as Client;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('/periode', function () {
-    return view('periode/index');
+Route::controller(Client\PeriodeController::class)->prefix('periode')->group(function () {
+    Route::get('/', 'index');
+    Route::get('/create', 'create');
+    Route::get('{periode_code}/detail', 'show');
 });
+
