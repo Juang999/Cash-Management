@@ -7,21 +7,23 @@
 @endpush
 
 @section('content')
-<div class="container h-100 w-100">
-    @include('periode.create')
-    <div class="card">
+<div class="container w-100">
+    {{-- button to create new periode --}}
+    <a href="/periode/create" class="btn btn-success p-25 mt-3 mb-3">
+        New Periode
+    </a>
+    <div class="card mb-5">
         <div class="card-body">
-            {{-- button to create new periode --}}
             {{-- table for data --}}
             <table class="table table-bordered">
                 <thead>
                     <tr class="table-primary">
-                        <th scope="col" style="width: 13%">Periode Code</th>
-                        <th scope="col">Start date</th>
-                        <th scope="col">End date</th>
-                        <th scope="col" style="width: 10%">Income</th>
-                        <th scope="col" style="width: 10%">Expenses</th>
-                        <th scope="col" style="width: 10%">Remainder</th>
+                        <th scope="col" style="width: 10%">Periode Code</th>
+                        <th scope="col" style="width: 10%">Start date</th>
+                        <th scope="col" style="width: 10%">End date</th>
+                        <th scope="col" style="width: 13%">Income</th>
+                        <th scope="col" style="width: 13%">Expenses</th>
+                        <th scope="col" style="width: 13%">Remainder</th>
                         <th scope="col" style="width: 15%">Action</th>
                     </tr>
                 </thead>
@@ -33,93 +35,125 @@
                         <td class="font-body">1.000.0000</td>
                         <td class="font-body">1.000.0000</td>
                         <td class="font-body">0</td>
-                        <td class="font-body">
-                            @include('periode.detail')
-                            @include('periode.delete')
+                        <td class="font-body d-flex justify-content-evenly">
+                            <a href="/periode/{{Carbon\Carbon::now()->format('Ym')}}/detail" class="btn btn-primary btn-sm flex-item">
+                                detail
+                            </a>
+                            <button type="button" class="btn btn-danger btn-sm flex-item" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                delete
+                            </button>
                         </td>
                     </tr>
                     <tr>
                         <td class="font-body">{{Carbon\Carbon::now()->format('Ym')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">0</td>
-                        <td class="font-body" style="width: 15%">
-                            @include('periode.detail')
-                            @include('periode.delete')
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">0</td>
+                        <td class="font-body d-flex justify-content-evenly">
+                            <a href="/periode/{{Carbon\Carbon::now()->format('Ym')}}/detail" class="btn btn-primary btn-sm flex-item">
+                                detail
+                            </a>
+                            <button type="button" class="btn btn-danger btn-sm flex-item" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                delete
+                            </button>
                         </td>
                     </tr>
                     <tr>
                         <td class="font-body">{{Carbon\Carbon::now()->format('Ym')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">0</td>
-                        <td class="font-body" style="width: 15%">
-                            @include('periode.detail')
-                            @include('periode.delete')
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">0</td>
+                        <td class="font-body d-flex justify-content-evenly">
+                            <a href="/periode/{{Carbon\Carbon::now()->format('Ym')}}/detail" class="btn btn-primary btn-sm flex-item">
+                                detail
+                            </a>
+                            <button type="button" class="btn btn-danger btn-sm flex-item" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                delete
+                            </button>
                         </td>
                     </tr>
                     <tr>
                         <td class="font-body">{{Carbon\Carbon::now()->format('Ym')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">0</td>
-                        <td class="font-body" style="width: 15%">
-                            @include('periode.detail')
-                            @include('periode.delete')
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">0</td>
+                        <td class="font-body d-flex justify-content-evenly">
+                            <a href="/periode/{{Carbon\Carbon::now()->format('Ym')}}/detail" class="btn btn-primary btn-sm flex-item">
+                                detail
+                            </a>
+                            <button type="button" class="btn btn-danger btn-sm flex-item" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                delete
+                            </button>
                         </td>
                     </tr>
                     <tr>
                         <td class="font-body">{{Carbon\Carbon::now()->format('Ym')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">0</td>
-                        <td class="font-body" style="width: 15%">
-                            @include('periode.detail')
-                            @include('periode.delete')
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">0</td>
+                        <td class="font-body d-flex justify-content-evenly">
+                            <a href="/periode/{{Carbon\Carbon::now()->format('Ym')}}/detail" class="btn btn-primary btn-sm flex-item">
+                                detail
+                            </a>
+                            <button type="button" class="btn btn-danger btn-sm flex-item" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                delete
+                            </button>
                         </td>
                     </tr>
                     <tr>
                         <td class="font-body">{{Carbon\Carbon::now()->format('Ym')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">0</td>
-                        <td class="font-body" style="width: 15%">
-                            @include('periode.detail')
-                            @include('periode.delete')
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">0</td>
+                        <td class="font-body d-flex justify-content-evenly">
+                            <a href="/periode/{{Carbon\Carbon::now()->format('Ym')}}/detail" class="btn btn-primary btn-sm flex-item">
+                                detail
+                            </a>
+                            <button type="button" class="btn btn-danger btn-sm flex-item" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                delete
+                            </button>
                         </td>
                     </tr>
                     <tr>
                         <td class="font-body">{{Carbon\Carbon::now()->format('Ym')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">0</td>
-                        <td class="font-body" style="width: 15%">
-                            @include('periode.detail')
-                            @include('periode.delete')
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">0</td>
+                        <td class="font-body d-flex justify-content-evenly">
+                            <a href="/periode/{{Carbon\Carbon::now()->format('Ym')}}/detail" class="btn btn-primary btn-sm flex-item">
+                                detail
+                            </a>
+                            <button type="button" class="btn btn-danger btn-sm flex-item" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                delete
+                            </button>
                         </td>
                     </tr>
                     <tr>
                         <td class="font-body">{{Carbon\Carbon::now()->format('Ym')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
                         <td class="font-body">{{Carbon\Carbon::now()->format('D, d M Y')}}</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">1.000.0000</td>
-                        <td class="font-body" style="width: 10%">0</td>
-                        <td class="font-body" style="width: 15%">
-                            @include('periode.detail')
-                            @include('periode.delete')
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">1.000.0000</td>
+                        <td class="font-body">0</td>
+                        <td class="font-body d-flex justify-content-evenly">
+                            <a href="/periode/{{Carbon\Carbon::now()->format('Ym')}}/detail" class="btn btn-primary btn-sm flex-item">
+                                detail
+                            </a>
+                            <button type="button" class="btn btn-danger btn-sm flex-item" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                delete
+                            </button>
                         </td>
                     </tr>
                 </tbody>
@@ -142,6 +176,24 @@
                     </li>
                 </ul>
             </nav>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
         </div>
     </div>
 </div>
