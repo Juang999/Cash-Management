@@ -24,7 +24,7 @@
                 <img src="{{ asset('images/icon/save-money.png') }}" class="card-img-top img-icon flex-item">
             </div>
             <div class="card-body d-flex justify-content-center">
-                <a href="#" class="btn fs-5 nav-link">Cash Management</a>
+                <a href="/cash-management" class="btn fs-5 nav-link">Cash Management</a>
             </div>
         </div>
     </div>

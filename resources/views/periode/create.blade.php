@@ -13,22 +13,23 @@
             Add Periode
         </div>
         <div class="card-body">
-            <form>
+            <form method="POST" action="/periode/store">
+                @csrf
                 <div class="d-flex justify-content-evenly">
                     <div class="flex-item d-flex justify-content-between w-50 border-end border-bottom container">
                         <div class="mb-3 flex-item startdate">
                             <label for="startdate" class="form-label">Start date</label>
-                            <input type="date" class="form-control" id="startdate">
+                            <input type="date" name="start_date" class="form-control" id="startdate">
                         </div>
                         <div class="mb-3 flex-item enddate">
                             <label for="enddate" class="form-label">End date</label>
-                            <input type="date" class="form-control" id="enddate">
+                            <input type="date" name="end_date" class="form-control" id="enddate">
                         </div>
                     </div>
                     <div class="flex-item w-50 container border-bottom">
                         <div class="mb-3">
                             <label for="enddate" class="form-label">Income</label>
-                            <input type="number" class="form-control w-75" id="enddate">
+                            <input type="number" name="income" class="form-control w-75" id="enddate">
                         </div>
                     </div>
                 </div>

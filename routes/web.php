@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client as Client;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +19,26 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::controller(Controllers\AuthController::class)->prefix('auth')->group(function () {
+    Route::post('/login', 'login');
 });
 
-Route::controller(Client\PeriodeController::class)->prefix('periode')->group(function () {
-    Route::get('/', 'index');
-    Route::get('/create', 'create');
-    Route::get('{periode_code}/detail', 'show');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    });
+
+    Route::controller(Client\PeriodeController::class)->prefix('periode')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/create', 'create');
+        Route::post('/store', 'store');
+        Route::get('{periode_code}/detail', 'show');
+    });
+
+    Route::controller(Client\CashManagementController::class)->prefix('cash-management')->group(function () {
+        Route::get('/', 'index');
+    });
 });
+
+
 

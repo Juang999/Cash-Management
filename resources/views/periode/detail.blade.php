@@ -8,19 +8,6 @@
         <div class="card w-100">
             <h5 class="card-header">Detail Periode</h5>
             <div class="card-body">
-                <div class="mb-3 w-50 d-flex justify-content-start align-items-end">
-                    <div class="flex-item" style="width: 55%;">
-                        <label for="disabledSelect" class="form-label" style="font-size: 14px;">Periode</label>
-                        <select id="disabledSelect" class="form-select" style="font-size: 14px;">
-                            <option>-</option>
-                            <option style="font-size: 14px;">{{Carbon\Carbon::now()->format('Y-m-d')}} -
-                                {{Carbon\Carbon::now()->format('Y-m-d')}}</option>
-                        </select>
-                    </div>
-                    <div class="flex-item">
-                        <a href="#" class="btn btn-primary btn-sm">search</a>
-                    </div>
-                </div>
                 <div class="d-flex justify-content-evenly">
                     <div class="p-3 flex-item border" style="width: 33%;">
                         <h5>Income</h5>
@@ -72,8 +59,9 @@
                             <td class="text-center">5.000</td>
                             <td class="text-center">31</td>
                             <td>155.000</td>
-                            <td class="d-flex justify-content-center">
-                                <button class="btn btn-danger btn-sm flex-item">Delete</button>
+                            <td class="d-flex justify-content-evenly">
+                                <button class="flex item btn btn-primary btn-sm">Update</button>
+                                <button class="flex-item btn btn-danger btn-sm">Delete</button>
                             </td>
                         </tr>
                         <tr>
@@ -83,18 +71,8 @@
                             <td class="text-center">5.000</td>
                             <td class="text-center">31</td>
                             <td>155.000</td>
-                            <td class="d-flex justify-content-center">
-                                <button class="btn btn-danger btn-sm flex-item">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Makan</td>
-                            <td>Pangan</td>
-                            <td class="text-center">5.000</td>
-                            <td class="text-center">31</td>
-                            <td>155.000</td>
-                            <td class="d-flex justify-content-center">
+                            <td class="d-flex justify-content-evenly">
+                                <button class="flex item btn btn-primary btn-sm">Update</button>
                                 <button class="flex-item btn btn-danger btn-sm">Delete</button>
                             </td>
                         </tr>
@@ -105,7 +83,8 @@
                             <td class="text-center">5.000</td>
                             <td class="text-center">31</td>
                             <td>155.000</td>
-                            <td class="d-flex justify-content-center">
+                            <td class="d-flex justify-content-evenly">
+                                <button class="flex item btn btn-primary btn-sm">Update</button>
                                 <button class="flex-item btn btn-danger btn-sm">Delete</button>
                             </td>
                         </tr>
@@ -116,7 +95,8 @@
                             <td class="text-center">5.000</td>
                             <td class="text-center">31</td>
                             <td>155.000</td>
-                            <td class="d-flex justify-content-center">
+                            <td class="d-flex justify-content-evenly">
+                                <button class="flex item btn btn-primary btn-sm">Update</button>
                                 <button class="flex-item btn btn-danger btn-sm">Delete</button>
                             </td>
                         </tr>
@@ -127,7 +107,20 @@
                             <td class="text-center">5.000</td>
                             <td class="text-center">31</td>
                             <td>155.000</td>
-                            <td class="d-flex justify-content-center">
+                            <td class="d-flex justify-content-evenly">
+                                <button class="flex item btn btn-primary btn-sm">Update</button>
+                                <button class="flex-item btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Makan</td>
+                            <td>Pangan</td>
+                            <td class="text-center">5.000</td>
+                            <td class="text-center">31</td>
+                            <td>155.000</td>
+                            <td class="d-flex justify-content-evenly">
+                                <button class="flex item btn btn-primary btn-sm">Update</button>
                                 <button class="flex-item btn btn-danger btn-sm">Delete</button>
                             </td>
                         </tr>
