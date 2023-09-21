@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Periode;
+use App\Models\{Periode, NeedCategory};
 
 class PeriodeController extends Controller
 {
@@ -21,7 +21,11 @@ class PeriodeController extends Controller
      */
     public function create()
     {
-        return view('periode.create');
+        $category = NeedCategory::get();
+
+        return view('periode.create', [
+            'categories' => $category
+        ]);
     }
 
     /**
