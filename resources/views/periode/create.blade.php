@@ -42,10 +42,10 @@
                     <div class="mb-3 flex-item category">
                         <label for="category" class="form-label">Category</label>
                         <select id="category" class="form-select">
-                            <option>Sandang</option>
-                            <option>Pangan</option>
-                            <option>Papan</option>
-                            <option>Personal</option>
+                            <option>-</option>
+                            @foreach($categories as $category)
+                                <option>{{$category->category_description}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="mb-3 flex-item unit-price">

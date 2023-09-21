@@ -29,11 +29,11 @@
                         <img src="{{ asset('images/icon/user.png') }}" id="profile-photo" alt="">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Bangkit Juang R
+                            {{Auth::user()->name}}
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="/settings/">Settings</a></li>
                             <br>
                             <li><a class="dropdown-item" href="#">Logout</a></li>
                         </ul>
@@ -50,10 +50,11 @@
             <p class="text-white d-flex" style="margin: 0px;">Copyright &copy; 2023 &nbsp; <a href="https://github.com/Juang999" class="text-white text-decoration-none"> Bangkit Juang Raharjo</a></p>
         </div>
     </footer>
-    @stack('jquery')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
+    @stack('jquery')
 
 </body>
 
